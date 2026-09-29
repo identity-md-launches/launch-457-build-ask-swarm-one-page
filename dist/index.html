@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b10" />
+    <meta name="description" content="One question. Many minds. Ask the IMD swarm a yes-or-no question and leave a little room for chance." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Ask the Swarm — A little collective wisdom</title>
+    <script type="module" crossorigin src="./assets/index-CPtiL8d5.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-5md8Am-g.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#question">Skip to question</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="https://imd.fun" aria-label="IMD home">
+          <svg class="brand-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="m14 2 11 12-11 12L3 14 14 2Z" stroke="currentColor" stroke-width="1.5"/><path d="m14 8 5 6-5 6-5-6 5-6Z" fill="currentColor"/></svg>
+          <span>IMD</span>
+        </a>
+        <span class="header-divider" aria-hidden="true"></span>
+        <span class="header-label">Playground</span>
+        <span class="header-note">A little collective wisdom</span>
+      </header>
+
+      <main>
+        <div class="intro">
+          <p class="eyebrow"><span class="small-star" aria-hidden="true">✳</span> The collective oracle</p>
+          <h1>Ask the Swarm<span class="heading-dot">.</span></h1>
+          <p class="intro-copy">One question. Many minds. Let the swarm decide.</p>
+        </div>
+
+        <section class="oracle" aria-label="The swarm oracle" data-phase="idle">
+          <div class="orb-stage">
+            <span class="orb-note orb-note-left" aria-hidden="true"><span class="note-line"></span>Many minds</span>
+            <div class="orb-visual">
+              <canvas id="swarm" aria-hidden="true"></canvas>
+              <div class="orb-message" aria-hidden="true">
+                <svg class="idle-symbol" width="32" height="40" viewBox="0 0 32 40" fill="none"><path d="m16 3 12 17-12 17L4 20 16 3Z" stroke="currentColor" stroke-width="1"/><path d="M16 11v18M9 20h14" stroke="currentColor" stroke-width="1"/></svg>
+                <span id="orb-caption" class="orb-caption">Possibility awaits</span>
+                <p id="answer" class="answer"></p>
+              </div>
+            </div>
+            <span class="orb-note orb-note-right" aria-hidden="true">One answer<span class="note-line"></span></span>
+          </div>
+          <div class="orb-toolbar">
+            <div class="swarm-state"><span class="status-dot" aria-hidden="true"></span><span id="swarm-state">The swarm is listening</span></div>
+            <button id="motion-toggle" class="motion-toggle" type="button" aria-label="Pause motion">
+              <svg class="pause-icon" viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M5 4v8M11 4v8" stroke="currentColor" stroke-width="1.5"/></svg>
+              <svg class="play-icon" viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="m5 3 8 5-8 5V3Z" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span id="motion-label">Pause motion</span>
+            </button>
+          </div>
+        </section>
+
+        <form id="question-form" class="question-form" novalidate>
+          <label for="question">What’s on your mind?</label>
+          <div class="question-controls">
+            <div class="input-wrap">
+              <span class="question-symbol" aria-hidden="true">?</span>
+              <input id="question" name="question" type="text" placeholder="Will today be my day?" autocomplete="off" maxlength="500" enterkeyhint="go" aria-describedby="question-help question-error" />
+            </div>
+            <button id="ask-button" class="ask-button" type="submit">
+              <span>Ask the Swarm</span>
+              <svg class="button-arrow" width="19" height="19" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="button-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="form-feedback">
+            <p id="question-help">Make it a yes-or-no question. Leave the rest to chance.</p>
+            <p id="question-error" class="question-error" role="status"></p>
+          </div>
+        </form>
+        <p class="just-for-fun"><span aria-hidden="true">✧</span> A cosmic coin flip. Just for fun.</p>
+        <p id="announcement" class="sr-only" role="status" aria-atomic="true"></p>
+        <noscript><p class="noscript">Enable JavaScript to wake the swarm and ask a question.</p></noscript>
+      </main>
+
+      <footer class="site-footer">
+        <p><svg width="15" height="15" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="m14 2 11 12-11 12L3 14 14 2Z" stroke="currentColor" stroke-width="2"/></svg>Powered by the IMD swarm</p>
+        <p>Small questions. Infinite possibilities.</p>
+      </footer>
+    </div>
+  </body>
+</html>

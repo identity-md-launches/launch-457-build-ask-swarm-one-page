@@ -1,0 +1,18 @@
+{
+  "name": "ask-the-swarm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc src/answers.ts --outDir test/scratch/answers --target ES2022 --module ES2022 && node --test tests/answers.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vite": "7.3.6"
+  },
+  "engines": { "node": ">=22.13.0" }
+}
